@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: #adadad;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 p {
@@ -9,10 +10,11 @@ p {
 
 h1 {
     color: white;
-  }
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
 
 h2 {
-  color: #adadad;
+  color: white;
 }
 
 h3 {
@@ -62,6 +64,6 @@ ol{
 }
 
 .subHeading {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   margin-top: 0px;
 }
