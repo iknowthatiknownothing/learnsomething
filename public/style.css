@@ -53,6 +53,10 @@ ol{
   color: #adadad;
 }
 
+.circleBlock {
+  display: inline-block;
+}
+
 .circleImage {
   width: auto;
   height: 200px;
