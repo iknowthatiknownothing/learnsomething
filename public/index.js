@@ -7,7 +7,7 @@ function randomTopic () {
         return random1;
     }
     
-    var randomTopicNum = randomGenerator(3);
+    var randomTopicNum = randomGenerator(4);
     
     if(randomTopicNum === 1) {
     
@@ -17,6 +17,11 @@ function randomTopic () {
     else if (randomTopicNum === 2) {
     
         window.location="./public/gargoyle.html";
+    
+    }
+    else if (randomTopicNum === 3) {
+    
+        window.location="./public/other.html";
     
     }
     else {
