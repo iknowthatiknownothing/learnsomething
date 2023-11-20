@@ -7,7 +7,7 @@ function randomTopic () {
         return random1;
     }
     
-    var randomTopicNum = randomGenerator(4);
+    var randomTopicNum = randomGenerator(5);
     
     if(randomTopicNum === 1) {
     
@@ -22,6 +22,11 @@ function randomTopic () {
     else if (randomTopicNum === 3) {
     
         window.location="./public/other.html";
+    
+    }
+    else if (randomTopicNum === 4) {
+    
+        window.location="./public/deeptime.html";
     
     }
     else {
