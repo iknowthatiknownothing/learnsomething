@@ -36,3 +36,18 @@ function randomTopic () {
     }
     
     }
+
+
+function hoverLink (linkID) {
+
+    $("#" + linkID).hover(function(){
+            
+        $("#" + linkID).attr("src", "./public/images/" + linkID + "_desc.jpg");
+        
+        }, function(){
+    
+        $("#" + linkID).attr("src", "./public/images/" + linkID + ".jpg");
+    
+    });
+        
+};

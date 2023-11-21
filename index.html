@@ -21,60 +21,51 @@
 </head>
 <body>
 
-    <h1 class="title">iKnowThatiKnowNothing</h1>
-    <p class="subHeading">Exploration of issues (per study) affecting humanity utilizing the art form of music for the purpose of edifying social participants to begin consious conversation or change.
-    <br><a href="mailto:auricularimpalement@gmail.com">Contact</a>
+    <div class="title">
+    <h1>iKnowThatiKnowNothing</h1>
+    
+    <p class="subTitle">Exploration of issues (per study) affecting humanity utilizing the art form of music for the purpose of edifying social participants to begin consious conversation or change.
     </p>
 
     <p>
         <button onclick="randomTopic()">Random Topic</button>
     </p>
-
-    <!-- Navigation Bar -->
-    <hr />
-    | <a href="./index.html">Home</a> 
-    | <a href="./public/rhinoceros.html">Rhinoceros</a> 
-    | <a href="./public/gargoyle.html">Gargoyle</a> 
-    | <a href="./public/whitesavior.html">Savior</a> 
-    | <a href="./public/other.html">Other</a> 
-    | <a href="./public/deeptime.html">Time</a> 
-    |
-    <hr />
     
-    <div class="circleBlock"></div>
+    </div>
+    
+    <div class="mainBlock">
+        
         <a href="./public/rhinoceros.html">
-            <img class="circleImage" src="./public/images/rhino.jpg">
+            <img class="circleImage" id="rhino" src="./public/images/rhino.jpg">
         </a>
-    </div>
 
-    <div class="circleBlock">
         <a href="./public/gargoyle.html">
-            <img class="circleImage" src="./public/images/gargoyle.jpg">
+            <img class="circleImage" id="gargoyle" src="./public/images/gargoyle.jpg">
         </a>
-    </div>
 
-    <div class="circleBlock">
         <a href="./public/whitesavior.html">
-            <img class="circleImage" src="./public/images/stjohns.jpg">
+            <img class="circleImage" id="stjohns" src="./public/images/stjohns.jpg">
         </a>
-    </div>
 
-    <div class="circleBlock"></div>
     <a href="./public/other.html">
-        <img class="circleImage" src="./public/images/flag.jpg">
+        <img class="circleImage" id="flag" src="./public/images/flag.jpg">
     </a>
-    </div>
 
-    <div class="circleBlock"></div>
     <a href="./public/deeptime.html">
-        <img class="circleImage" src="./public/images/deeptime.jpg">
+        <img class="circleImage" id="deeptime" src="./public/images/deeptime.jpg">
     </a>
-    </div>
     
-    <br />
-    <a href="mailto:auricularimpalement@gmail.com">Contact</a>
+</div>
 
+<div class="footerBlock">
+    <a href="mailto:auricularimpalement@gmail.com">Contact</a>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./public/index.js" charset="UTF-8"></script>
+    <script>
+        hoverLink("rhino");
+    </script>
 
 </body>
 </html>
