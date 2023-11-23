@@ -1,43 +1,39 @@
-function randomTopic () {
+var siteURL = "https://www.youtube.com/embed/"
+var purposeID = "xiQY-qcHz4M?si=Mq9eh3Nu834QJD1f";
+var evilID = "7HlSkc3G4ig?si=o-1AtSQMiCrZqjek";
+var evilHTML = "<h3>Literary Reference</h3><ol><li><a href='https://www.amazon.com/Origin-Satan-Christians-Demonized-Heretics/dp/0679731180' target='_blank'>The Origin of Satan: How Christians Demonized Jews, Pagans, and Heretics</a> by Elaine Pagels</li><li><a href='https://youtu.be/C6zovYEZs5g?si=0Nb_Ekf7qDrX3SOT'>Satan is Real</a> by the Louvin Brothers</li></ol>"
+var meritID = "TI9HBpyGzaI?si=vbDLoW_p5BqRqEBi";
+var divisionID = "2011gm8b8yI";
+var timeID = "OxkkpbUmyoI";
 
-    function randomGenerator(maxValue){
-        var num1 = Math.random();
-        var num2 = num1 * maxValue;
-        var random1 = Math.floor(num2) + 1;
-        return random1;
-    }
-    
-    var randomTopicNum = randomGenerator(5);
-    
-    if(randomTopicNum === 1) {
-    
-        window.location="./public/rhinoceros.html";
-    
-    }
-    else if (randomTopicNum === 2) {
-    
-        window.location="./public/gargoyle.html";
-    
-    }
-    else if (randomTopicNum === 3) {
-    
-        window.location="./public/other.html";
-    
-    }
-    else if (randomTopicNum === 4) {
-    
-        window.location="./public/deeptime.html";
-    
-    }
-    else {
-    
-        window.location="./public/whitesavior.html";
-    
-    }
-    
-    }
+    $(".typeWriterButton").on ("click", function(){
+        
+        var videoName = $(this).attr("id");
 
+        switch (videoName) {
+            case "purpose":
+                $("#videoFrame").attr("src", siteURL + purposeID);
+                break;
+            case "evil":
+                $("#videoFrame").attr("src", siteURL + evilID);
+                //$("#topicInformation").html (evilHTML);
+                break;
+            case "merit":
+                $("#videoFrame").attr("src", siteURL + meritID);
+                break;
+            case "division":
+                $("#videoFrame").attr("src", siteURL + divisionID);
+                break;
+            case "time":
+                $("#videoFrame").attr("src", siteURL + timeID);
+                break;
+            default:
+                break;
+        }
+    
+    });
 
+/*
 function hoverLink (linkID) {
 
     $("#" + linkID).hover(function(){
@@ -51,3 +47,4 @@ function hoverLink (linkID) {
     });
         
 };
+*/
