@@ -66,6 +66,10 @@ ol{
   border: 0px solid black;
 }
 
+.typeWriterButton:hover {
+  cursor: pointer;  
+}
+
 .title {
   margin: auto;
   width: 100%;
