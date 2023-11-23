@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  color: #adadad;
+  color: black;
 }
 
 h1 {
@@ -17,12 +17,8 @@ h2 {
   color: white;
 }
 
-h3 {
-  color: #adadad;
-}
-
-h4 {
-  color: #adadad;
+h3 h4 {
+  color: black;
 }
 
 a {
@@ -31,17 +27,17 @@ a {
 
 /* unvisited link */
 a:link {
-  color: blue;
+  color: gray;
 }
 
 /* visited link */
 a:visited {
-  color: blue;
+  color: gray;
 }
 
 /* mouse over link */
 a:hover {
-  color: #adadad;
+  color: blue;
 }
 
 /* selected link */
@@ -50,7 +46,7 @@ a:active {
 }
 
 ol{
-  color: #adadad;
+  color: black;
 }
 
 .typeWriterButton {
@@ -85,6 +81,7 @@ ol{
 .subTitle {
   font-size: 0.85rem;
   margin-top: 0px;
+  color: gray;
 }
 
 .mainBlock {
@@ -93,6 +90,14 @@ ol{
   border: 0px;
   padding: 0px;
   text-align: center;
+}
+
+.descriptionBlock {
+  margin: auto;
+  width: 50%;
+  border: 0px;
+  padding: 0px;
+  text-align: left; 
 }
 
 .footerBlock {

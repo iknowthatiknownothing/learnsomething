@@ -1,57 +1,55 @@
+// Set the site where the videos are located.
+
 var siteURL = "https://www.youtube.com/embed/"
+
+// Set the ids of each video which will be appended to the siteURL variable.
+
 var purposeID = "xiQY-qcHz4M?si=Mq9eh3Nu834QJD1f";
 var evilID = "7HlSkc3G4ig?si=o-1AtSQMiCrZqjek";
-var evilHTML = "<h3>Literary Reference</h3><ol><li><a href='https://www.amazon.com/Origin-Satan-Christians-Demonized-Heretics/dp/0679731180' target='_blank'>The Origin of Satan: How Christians Demonized Jews, Pagans, and Heretics</a> by Elaine Pagels</li><li><a href='https://youtu.be/C6zovYEZs5g?si=0Nb_Ekf7qDrX3SOT'>Satan is Real</a> by the Louvin Brothers</li></ol>"
 var meritID = "TI9HBpyGzaI?si=vbDLoW_p5BqRqEBi";
 var divisionID = "2011gm8b8yI";
 var timeID = "OxkkpbUmyoI";
 
-    $(".typeWriterButton").on ("click", function(){
+// Click function for all divs with typeWriterButton class.
+
+$(".typeWriterButton").on ("click", function(){
         
-        var videoName = $(this).attr("id");
+    var videoName = $(this).attr("id");
 
-        $(".typeWriterButton").removeClass("typeWriterButtonHighlight");
+    // Reset the highlighted button.
 
-        switch (videoName) {
-            case "purpose":
-                $("#videoFrame").attr("src", siteURL + purposeID);
-                $(this).addClass("typeWriterButtonHighlight");
-                break;
-            case "evil":
-                $("#videoFrame").attr("src", siteURL + evilID);
-                $(this).addClass("typeWriterButtonHighlight");
-                //$("#topicInformation").html (evilHTML);
-                break;
-            case "merit":
-                $("#videoFrame").attr("src", siteURL + meritID);
-                $(this).addClass("typeWriterButtonHighlight");
-                break;
-            case "division":
-                $("#videoFrame").attr("src", siteURL + divisionID);
-                $(this).addClass("typeWriterButtonHighlight");
-                break;
-            case "time":
-                $("#videoFrame").attr("src", siteURL + timeID);
-                $(this).addClass("typeWriterButtonHighlight");
-                break;
-            default:
-                break;
-        }
+    $(".typeWriterButton").removeClass("typeWriterButtonHighlight");
+
+    // Change the src of the iframe for the video selected from the typeWriterButton.
+
+    switch (videoName) {
+        case "purpose":
+            $("#videoFrame").attr("src", siteURL + purposeID);
+            $(this).addClass("typeWriterButtonHighlight");
+            $("#topicInformation").load('./public/rhinoceros.html');
+            break;
+        case "evil":
+            $("#videoFrame").attr("src", siteURL + evilID);
+            $(this).addClass("typeWriterButtonHighlight");
+            $("#topicInformation").load('./public/gargoyle.html');
+            break;
+        case "merit":
+            $("#videoFrame").attr("src", siteURL + meritID);
+            $(this).addClass("typeWriterButtonHighlight");
+            $("#topicInformation").load('./public/whitesavior.html');
+            break;
+        case "division":
+            $("#videoFrame").attr("src", siteURL + divisionID);
+            $(this).addClass("typeWriterButtonHighlight");
+            $("#topicInformation").load('./public/other.html');
+            break;
+        case "time":
+            $("#videoFrame").attr("src", siteURL + timeID);
+            $(this).addClass("typeWriterButtonHighlight");
+            $("#topicInformation").load('./public/deeptime.html');
+            break;
+        default:
+            break;
+    }
     
-    });
-
-/*
-function hoverLink (linkID) {
-
-    $("#" + linkID).hover(function(){
-            
-        $("#" + linkID).attr("src", "./public/images/" + linkID + "_desc.jpg");
-        
-        }, function(){
-    
-        $("#" + linkID).attr("src", "./public/images/" + linkID + ".jpg");
-    
-    });
-        
-};
-*/
+});
