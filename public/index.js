@@ -10,22 +10,29 @@ var timeID = "OxkkpbUmyoI";
         
         var videoName = $(this).attr("id");
 
+        $(".typeWriterButton").removeClass("typeWriterButtonHighlight");
+
         switch (videoName) {
             case "purpose":
                 $("#videoFrame").attr("src", siteURL + purposeID);
+                $(this).addClass("typeWriterButtonHighlight");
                 break;
             case "evil":
                 $("#videoFrame").attr("src", siteURL + evilID);
+                $(this).addClass("typeWriterButtonHighlight");
                 //$("#topicInformation").html (evilHTML);
                 break;
             case "merit":
                 $("#videoFrame").attr("src", siteURL + meritID);
+                $(this).addClass("typeWriterButtonHighlight");
                 break;
             case "division":
                 $("#videoFrame").attr("src", siteURL + divisionID);
+                $(this).addClass("typeWriterButtonHighlight");
                 break;
             case "time":
                 $("#videoFrame").attr("src", siteURL + timeID);
+                $(this).addClass("typeWriterButtonHighlight");
                 break;
             default:
                 break;

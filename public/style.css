@@ -70,6 +70,10 @@ ol{
   cursor: pointer;  
 }
 
+.typeWriterButtonHighlight {
+  background-color: gray;
+}
+
 .title {
   margin: auto;
   width: 100%;
