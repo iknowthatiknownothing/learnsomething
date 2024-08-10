@@ -49,12 +49,12 @@ ol{
   color: black;
 }
 
-.typeWriterButton {
-  width: 100px;
+.displayButton {
+  width: 150px;
   border-radius: 10px;
   display: inline-block;
   background-color: black;
-  color: white;
+  color: black;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   vertical-align: middle;
@@ -62,12 +62,8 @@ ol{
   border: 0px solid black;
 }
 
-.typeWriterButton:hover {
-  cursor: pointer;  
-}
-
-.typeWriterButtonHighlight {
-  background-color: gray;
+.mapArea:hover {
+  cursor: pointer;
 }
 
 .title {
