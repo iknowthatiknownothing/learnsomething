@@ -27,22 +27,22 @@ a {
 
 /* unvisited link */
 a:link {
-  color: gray;
+  color: white;
 }
 
 /* visited link */
 a:visited {
-  color: gray;
+  color: white;
 }
 
 /* mouse over link */
 a:hover {
-  color: blue;
+  color: black;
 }
 
 /* selected link */
 a:active {
-  color: black;
+  color: white;
 }
 
 ol{
