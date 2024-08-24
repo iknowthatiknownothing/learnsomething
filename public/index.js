@@ -11,11 +11,46 @@ if (searchParams.has('selection')) {
     $("#topicInformation").load(mapURL);
 }
 
+/* Functionality for menu
+
+$(".menuButton").on ("mouseover", function(){
+        
+    $(this).css("background","grey");
+
+});
+
+$(".menuButton").on ("mouseout", function(){
+
+    $(this).css("background","black");
+
+});
+
+$(".menuButton").on ("click", function(){
+        
+    var menuSelection = $(this).attr("id");
+    
+});
+
+*/
+
 // Functionality for main page
 
 $("#impale").on ("mouseover", function(){
 
-    $("#impale").css("background","red");
+    switch (impaleOnOff) {
+    
+        case 'off':
+    
+            $("#impale").css("background","red");
+            $("#impale").html("Warning! Gore");
+            break;
+    
+        case 'on':
+    
+            $("#impale").css("background","red");
+            $("#impale").html("Learn Something");
+            break;
+        }
 });
 
 $("#impale").on ("mouseout", function(){
@@ -25,11 +60,13 @@ $("#impale").on ("mouseout", function(){
         case 'off':
     
             $("#impale").css("background","black");
+            $("#impale").html("Learn Something");
             break;
     
         case 'on':
     
             $("#impale").css("background","red");
+            $("#impale").html("Learn Something");
             break;
         }
 
