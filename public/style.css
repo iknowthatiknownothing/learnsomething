@@ -162,6 +162,10 @@ ol{
   text-align: center;
 }
 
+.mapArea {
+  cursor: pointer;
+}
+
 .imageTable {
   margin: auto;
   width: 300px;
