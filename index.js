@@ -11,6 +11,8 @@ if (searchParams.has('selection')) {
     $("#topicInformation").load(mapURL);
 }
 
+$("#hexagram_head").load("hexagram_head.html");
+
 /* Functionality for menu
 
 $(".menuButton").on ("mouseover", function(){
@@ -79,14 +81,14 @@ $("#impale").on ("click", function(){
     case 'off':
 
         $("#impale").css("background","red");
-        $("#mainImage").attr("src","./public/images/impalement.png");
+        $("#mainImage").attr("src","./images/impalement.png");
         impaleOnOff = 'on';
         break;
 
     case 'on':
 
         $("#impale").css("background","black");
-        $("#mainImage").attr("src","./public/images/potential_impalement.png");
+        $("#mainImage").attr("src","./images/potential_impalement.png");
         impaleOnOff = 'off';
         break;
     }
@@ -120,6 +122,7 @@ $(".mapArea").on ("mouseout", function(){
     $("#linkDisplayButton").css("color","black");
 });
 
+/*
 $(".mapArea").on ("click", function(){
         
     var mapLink = $(this).attr("id");
@@ -127,3 +130,4 @@ $(".mapArea").on ("click", function(){
 
     $("#topicInformation").load(mapURL);
 });
+*/
