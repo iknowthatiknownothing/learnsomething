@@ -11,8 +11,6 @@ if (searchParams.has('selection')) {
     $("#topicInformation").load(mapURL);
 }
 
-$("#hexagram_head").load("hexagram_head.html");
-
 /* Functionality for menu
 
 $(".menuButton").on ("mouseover", function(){
