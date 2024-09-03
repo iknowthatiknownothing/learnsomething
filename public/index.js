@@ -79,14 +79,14 @@ $("#impale").on ("click", function(){
     case 'off':
 
         $("#impale").css("background","red");
-        $("#mainImage").attr("src","./images/impalement.png");
+        $("#mainImage").attr("src","./public/images/impalement.png");
         impaleOnOff = 'on';
         break;
 
     case 'on':
 
         $("#impale").css("background","black");
-        $("#mainImage").attr("src","./images/potential_impalement.png");
+        $("#mainImage").attr("src","./public/images/potential_impalement.png");
         impaleOnOff = 'off';
         break;
     }

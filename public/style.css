@@ -170,10 +170,14 @@ ol{
 
 .descriptionBlock {
   margin: auto;
-  width: 50%;
+  width: 635px;
   border: 0px;
   padding: 0px;
   text-align: left; 
+}
+
+.iFrameBlock {
+  text-align: center;
 }
 
 .hexBlock {
