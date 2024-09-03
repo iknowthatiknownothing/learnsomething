@@ -11,6 +11,7 @@ p {
 h1 {
     color: black;
     font-family: 'Big Shoulders Stencil Display', cursive;
+    margin-bottom: 0px;
 }
 
 h2 h3 h4 {
@@ -147,7 +148,6 @@ ol{
 
 .subTitle {
   font-size: 0.85rem;
-  margin-top: 0px;
   color: gray;
 }
 
@@ -207,6 +207,11 @@ ol{
   padding: 0px;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.hexLocation {
+  margin: 0px;
+  height: 30px;
 }
 
 .imageBox:link {
