@@ -232,3 +232,24 @@ ol{
   border: 1px solid black;
   cursor: pointer;
 }
+
+.formStyle {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.formContainer {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+}
