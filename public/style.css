@@ -140,7 +140,7 @@ ol{
 
 .title {
   margin: auto;
-  width: 100%;
+  width: 360px;
   border: 0px;
   padding: 0px;
   text-align: center;
@@ -170,7 +170,7 @@ ol{
 
 .descriptionBlock {
   margin: auto;
-  width: 635px;
+  width: 360px;
   border: 0px;
   padding: 0px;
   text-align: left; 
@@ -180,37 +180,13 @@ ol{
   text-align: center;
 }
 
-.hexBlock {
-    margin: auto;
-    width: 50%;
-    border: 0px;
-    padding: 0px;
-    text-align: center; 
-  }
-
 .footerBlock {
   margin: auto;
-  width: 100%;
+  width: 360;
   border: 0px;
-  padding: 10px;
+  padding: 0px;
   text-align: center;
   font-size: 0.85em;
-}
-
-.imageBox {
-  width: 100px;
-  height: 100px;
-  border-radius: 0px;
-  display: inline-block;
-  background-color: lightgray;
-  color: black;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  vertical-align: middle;
-  margin-bottom: 5px;
-  padding: 0px;
-  border: 1px solid black;
-  cursor: pointer;
 }
 
 .hexLocation {
@@ -228,4 +204,31 @@ ol{
 
 .imageBox:hover {
   color: grey;
+}
+
+.gridWrapper {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 20px 100px 100px 100px 20px;
+  gap: 5px;
+}
+
+.gridSpace {
+  border-radius: 0px;
+  display: inline-block;
+  background-color: white;
+}
+
+.gridItem {
+  width: 98px;
+  height: 98px;
+  border-radius: 0px;
+  display: inline-block;
+  background-color: lightgray;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  cursor: pointer;
 }
