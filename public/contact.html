@@ -18,6 +18,18 @@
     <!-- Style Sheet -->
     <link rel="stylesheet" href="./style.css" />
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "bn61SQnXJjv_qrChZ",
+            });
+        })();
+    </script>
+
 </head>
 <body>
 
@@ -26,10 +38,10 @@
 <div class="formStyle formContainer">
 
 <form>
-    <h3>Join Newsletter</h3>
+    <h3>Newsletter Sign-Up</h3>
     <input class="formItem" type="text" id="name" placeholder="Full Name" required>
-    <input class="formItem" type="email" id="email" placeholder="Email Address" required>
-    <button class="formItem" type="submit">Join</button>
+    <input class="formItem" type="email" id="inputEmail" placeholder="Email Address" required>
+    <button class="formItem" type="submit" onclick="sendMail()">Sign-Up</button>
 </form>
 
 </div>
