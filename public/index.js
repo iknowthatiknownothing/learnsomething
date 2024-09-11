@@ -183,7 +183,7 @@ function sendMail() {
 
     // Get reCAPTCHA token
     grecaptcha.ready(function() {
-        grecaptcha.execute('6Ld-1T0qAAAAAITn8FcrYJ6uGeCucJZmNBpa232K', {action: 'submit'}).then(function(token) {
+        grecaptcha.execute('6LdA4z0qAAAAABOkg1w4yH99N2anZAxWnqJsiRJw', {action: 'submit'}).then(function(token) {
             // Add the token to the formParams
             formParams['g-recaptcha-response'] = token;
 
