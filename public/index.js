@@ -173,6 +173,7 @@ function sendMail() {
     var formParams = {
         name: document.getElementById('name').value,
         email: document.getElementById('inputEmail').value,
+        'g-recaptcha-response': "",
     };
 
     // Validate form input
@@ -183,7 +184,7 @@ function sendMail() {
 
     // Get reCAPTCHA token
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LdA4z0qAAAAABOkg1w4yH99N2anZAxWnqJsiRJw', {action: 'submit'}).then(function(token) {
+        grecaptcha.execute('6LfL8T0qAAAAALGRwVbfnXBI2uBI7ytyX4eh88MD', {action: 'submit'}).then(function(token) {
             // Add the token to the formParams
             formParams['g-recaptcha-response'] = token;
 
