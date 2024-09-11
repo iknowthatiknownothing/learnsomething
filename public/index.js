@@ -135,11 +135,11 @@ $(".mapArea").on ("click", function(){
 
 // Newsletter Sign-Up Form
 
+/*
 function sendMail() {
     var formParams = {
         name: document.getElementById('name').value,
         email: document.getElementById('inputEmail').value,
-        'g-recaptcha-response': '6Ld-1T0qAAAAAITn8FcrYJ6uGeCucJZmNBpa232K',
     };
 
     // Validate form input
@@ -166,4 +166,46 @@ function sendMail() {
             console.error("Error sending email:", error);
             alert("There was an error sending your message. Please try again.");
         });
+}
+*/
+
+function sendMail() {
+    var formParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('inputEmail').value,
+    };
+
+    // Validate form input
+    if (!formParams.name || !formParams.email) {
+        alert("Please fill in both the name and email fields.");
+        return;
+    }
+
+    // Get reCAPTCHA token
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Ld-1T0qAAAAAITn8FcrYJ6uGeCucJZmNBpa232K', {action: 'submit'}).then(function(token) {
+            // Add the token to the formParams
+            formParams['g-recaptcha-response'] = token;
+
+            console.log("Name:", formParams.name);
+            console.log("Email:", formParams.email);
+            console.log("reCAPTCHA Token:", token);
+
+            const serviceID = "service_50b37r6";
+            const templateID = "template_lmz58in";
+
+            emailjs.send(serviceID, templateID, formParams)
+                .then((response) => {
+                    // Clear form input
+                    document.getElementById('name').value = "";
+                    document.getElementById('inputEmail').value = "";
+                    console.log("Response status:", response.status, response.text);
+                    alert("You have successfully signed up for the newsletter.");
+                })
+                .catch((error) => {
+                    console.error("Error sending email:", error);
+                    alert("There was an error sending your message. Please try again.");
+                });
+        });
+    });
 }
