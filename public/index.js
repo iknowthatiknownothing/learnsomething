@@ -133,7 +133,7 @@ $(".mapArea").on ("click", function(){
 });
 */
 
-// Newsletter Sign-Up Form
+// Newsletter Sign-Up Form w/out reCAPTCHA
 
 /*
 function sendMail() {
@@ -169,11 +169,24 @@ function sendMail() {
 }
 */
 
+// Newsletter Sign-Up Form with reCAPTCHA v2
+
 function sendMail() {
+
+    // Retrieve the reCAPTCHA response token from the user interaction
+    var token = grecaptcha.getResponse();
+    
+    // Check if the token exists
+    if (!token) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    // Build form parameters
     var formParams = {
         name: document.getElementById('name').value,
         email: document.getElementById('inputEmail').value,
-        'g-recaptcha-response': "",
+        'g-recaptcha-response': token,
     };
 
     // Validate form input
@@ -182,31 +195,32 @@ function sendMail() {
         return;
     }
 
-    // Get reCAPTCHA token
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LfL8T0qAAAAALGRwVbfnXBI2uBI7ytyX4eh88MD', {action: 'submit'}).then(function(token) {
-            // Add the token to the formParams
-            formParams['g-recaptcha-response'] = token;
+    console.log("Name:", formParams.name);
+    console.log("Email:", formParams.email);
+    console.log("reCAPTCHA Token:", token);
 
-            console.log("Name:", formParams.name);
-            console.log("Email:", formParams.email);
-            console.log("reCAPTCHA Token:", token);
+    const serviceID = "service_50b37r6";
+    const templateID = "template_lmz58in";
 
-            const serviceID = "service_50b37r6";
-            const templateID = "template_lmz58in";
+    // Send email via EmailJS
+    emailjs.send(serviceID, templateID, formParams)
+        .then((response) => {
+            // Clear form inputs
+            document.getElementById('name').value = "";
+            document.getElementById('inputEmail').value = "";
+            console.log("Response status:", response.status, response.text);
+            alert("You have successfully signed up for the newsletter.");
 
-            emailjs.send(serviceID, templateID, formParams)
-                .then((response) => {
-                    // Clear form input
-                    document.getElementById('name').value = "";
-                    document.getElementById('inputEmail').value = "";
-                    console.log("Response status:", response.status, response.text);
-                    alert("You have successfully signed up for the newsletter.");
-                })
-                .catch((error) => {
-                    console.error("Error sending email:", error);
-                    alert("There was an error sending your message. Please try again.");
-                });
+            // Redirect to the referring page (if it exists)
+            if (document.referrer) {
+                window.location.href = document.referrer;
+            } else {
+                window.location.href = "../index.html";
+            }
+
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            alert("There was an error sending your message. Please try again.");
         });
-    });
 }
