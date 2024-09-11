@@ -30,6 +30,8 @@
         })();
     </script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
 
@@ -37,11 +39,12 @@
     
 <div class="formStyle formContainer">
 
-<form>
+<form action="?" method="POST">
     <h3>Newsletter Sign-Up</h3>
     <input class="formItem" type="text" id="name" placeholder="Full Name" required>
     <input class="formItem" type="email" id="inputEmail" placeholder="Email Address" required>
-    <button class="formItem" type="button" onclick="sendMail()">Sign-Up</button>
+    <div class="g-recaptcha" data-sitekey="6Ld-1T0qAAAAAITn8FcrYJ6uGeCucJZmNBpa232K"></div>
+    <button class="formItem" type="button" onclick="sendMail()" value="Submit">Sign-Up</button>
 </form>
 
 </div>
