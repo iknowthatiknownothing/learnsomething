@@ -139,6 +139,7 @@ function sendMail() {
     var formParams = {
         name: document.getElementById('name').value,
         email: document.getElementById('inputEmail').value,
+        'g-recaptcha-response': '6Ld-1T0qAAAAAITn8FcrYJ6uGeCucJZmNBpa232K',
     };
 
     // Validate form input
