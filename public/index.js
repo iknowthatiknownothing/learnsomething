@@ -225,6 +225,6 @@ function sendMail() {
         });
 }
 
-app.get('/hexagram', (req, res) => {
+app.get('/hexagram.html', (req, res) => {
     res.redirect('https://www.auricularimpalement.com');
 });
