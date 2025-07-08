@@ -224,3 +224,7 @@ function sendMail() {
             alert("There was an error sending your message. Please try again.");
         });
 }
+
+app.get('/hexagram', (req, res) => {
+    res.redirect('https://www.auricularimpalement.com');
+});
